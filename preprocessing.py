@@ -9,6 +9,7 @@ import vtk
 from vtk.util import numpy_support
 from skimage import measure, morphology
 from mpl_toolkits.mplot3d.art3d import Poly3DCollection
+import pandas as pd 
 
 # take folder of a single lung and preprocess and segments the lungs
 
@@ -24,7 +25,8 @@ cases_root_folder = f'{NLST}/100004/01-02-2001-NA-NLST-LSS-01308/'
 cases_path = [cases_root_folder + fileName for fileName in os.listdir(cases_root_folder)]
 
 class preprocess:
-    def __init__(self, input_folder, dilation_kernel_size = 2, dilation_iteration = 2):
+    def __init__(self, input_folder, metadata_path, dilation_kernel_size = 2, dilation_iteration = 2):
+        self.metadata_path = metadata_path
         self.dilation_kernel_size = dilation_kernel_size
         self.dilation_iteration = dilation_iteration
         self.input_folder = input_folder
@@ -33,6 +35,14 @@ class preprocess:
         self.resampled_3d_image, self.spacing = self.resample(self.scan_HU_values, self.loaded_scans, [1,1,1])
         self.segmented_lung_mask = self.segment_lung_mask(self.resampled_3d_image, True, dilation = '3d', kernel_size = self.dilation_kernel_size, iteration = self.dilation_iteration)
         self.segmented_grayscale_scan = self.hu_transform(self.resampled_3d_image, self.segmented_lung_mask, lung_window= [-1200, 600])
+
+
+    def load_metadata(self, path = None):
+        path = path if path else self.metadata_path
+        metadata = pd.read_csv('path')
+        
+        return metadata
+
 
     def hu_transform(self, scan_HU_value, mask, lung_window = [-1200, 600]):
         
