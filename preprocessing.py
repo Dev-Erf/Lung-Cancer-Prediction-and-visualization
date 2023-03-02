@@ -7,7 +7,6 @@ import matplotlib.pyplot as plt
 import cv2 as cv
 import vtk
 from vtk.util import numpy_support
-
 from skimage import measure, morphology
 from mpl_toolkits.mplot3d.art3d import Poly3DCollection
 
@@ -15,7 +14,8 @@ from mpl_toolkits.mplot3d.art3d import Poly3DCollection
 
 
 
-INPUT_FOLDER = '../../dataset/manifest-1674660649243'
+INPUT_FOLDER = './dataset/manifest-1674660649243'
+
 NLST = f'{INPUT_FOLDER}/NLST flatten'
 
 expFolder = f'{NLST}/100004/01-02-2001-NA-NLST-LSS-01308/1.000000-2OPATOAQUL4C410.22-06725'
@@ -46,7 +46,14 @@ class preprocess:
         segmented_trans_scan = mask * trans_scaled_scan
         
         return segmented_trans_scan
-        
+
+    def visualize_intensity_histogram(self, array):
+        plt.hist(array.flatten(), bins=100, color='c')
+        plt.xlabel("intensity range")
+        plt.ylabel("Frequency")
+        plt.show()
+
+                
 
     def load_scan(self, path):
         slices = [dicom.read_file(path + '/' + s) for s in os.listdir(path)]
@@ -271,7 +278,7 @@ class vtk_visualization:
         render_window_interactor.Start()
 
 scan = preprocess(cases_path[1])
-
+scan.visualize_intensity_histogram(scan.segmented_grayscale_scan)
 #print(scan.hu_trans_segmented)
 #print(f'{type(scan.resampled_3d_image)} {scan.resampled_3d_image.dtype} {scan.resampled_3d_image.dtype.type} shape of hu values : {scan.resampled_3d_image.shape}')
 #print(f'{type(scan.segmented_lung_mask)} {scan.segmented_lung_mask.dtype} {scan.segmented_lung_mask.dtype.type} shape of mask : {scan.segmented_lung_mask.shape} {scan.segmented_lung_mask.astype(np.int16).dtype}')
@@ -280,4 +287,4 @@ scan = preprocess(cases_path[1])
 
 #print(scan.resampled_3d_image.astype(np.int16))
 scan_vis = vtk_visualization(scan.segmented_grayscale_scan)
-scan_vis.visualize(scan_vis.ren)
+#scan_vis.visualize(scan_vis.ren)
