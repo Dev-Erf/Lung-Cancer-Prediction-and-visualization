@@ -289,6 +289,7 @@ class vtk_visualization:
 
 scan = preprocess(cases_path[1])
 scan.visualize_intensity_histogram(scan.segmented_grayscale_scan)
+
 #print(scan.hu_trans_segmented)
 #print(f'{type(scan.resampled_3d_image)} {scan.resampled_3d_image.dtype} {scan.resampled_3d_image.dtype.type} shape of hu values : {scan.resampled_3d_image.shape}')
 #print(f'{type(scan.segmented_lung_mask)} {scan.segmented_lung_mask.dtype} {scan.segmented_lung_mask.dtype.type} shape of mask : {scan.segmented_lung_mask.shape} {scan.segmented_lung_mask.astype(np.int16).dtype}')
@@ -296,5 +297,5 @@ scan.visualize_intensity_histogram(scan.segmented_grayscale_scan)
 
 
 #print(scan.resampled_3d_image.astype(np.int16))
-scan_vis = vtk_visualization(scan.segmented_grayscale_scan)
+#scan_vis = vtk_visualization(scan.segmented_grayscale_scan)
 #scan_vis.visualize(scan_vis.ren)
