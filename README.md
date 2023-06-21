@@ -59,7 +59,7 @@ Otsu's thresholding method is a commonly used algorithm in image processing for 
 
 
 PUT A GIF OF VISUALIZATION HERE 
-![My Movie](https://github.com/Dev-Erf/Lung-Cancer-Prediction-and-visualization/assets/85780796/1ebdfa2a-3be5-4e6e-8d80-eeb52a767484)
+![lungs-hq](https://github.com/Dev-Erf/Lung-Cancer-Prediction-and-visualization/assets/85780796/505a235b-1759-462a-8bb8-988fe2cc93ca)
 
 
 ### Model Architechture
