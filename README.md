@@ -75,6 +75,7 @@ layer of the network. This gives us a tensor of shape (batch_size, num_filters),
 
 To make the heatmap more interpretable, we rescale it to the size of the original input image. We then apply a color map to the heatmap to make the cancerous regions more visible. We add this heatmap to the same volume rendering of the lungs, allowing us to visualize the cancerous regions in the context of the entire lung. Below you can see the final result.
 
+![Screen_Recording_2023-04-05_at_02 03 11](https://github.com/Dev-Erf/Lung-Cancer-Prediction-and-visualization/assets/85780796/196b4f7b-6738-4a23-9848-317e5f1fd8ba)
 
 
 PUT A GIF OF THE CANCEROUS PART HERE 
