@@ -51,14 +51,12 @@ Transfer function plays a crucial role in the visualization of lungs using volum
 
 In addition to the gradient transfer function, other transfer functions were used to adjust the color and opacity of different regions of the lungs, depending on their intensity values. Particularly, a novel approach was implemented to visualize lungs by analyzing the intensity diagram of the lung structure. This intensity diagram was observed to exhibit two distinct Gaussian-like distributions (Fig. 2). The first distribution was observed to be present in the intensity range of 5 to 80, whereas the second distribution spanned from 120 to 200. The experimental findings suggested that the first distribution primarily corresponded to the intensity values that were irrelevant to the lung structure, while the latter distribution was mainly associated with the intensity values of nodules present in the lungs. To enhance the visualization of the nodules and distinguish them from the surrounding lung tissue, Otsu's thresholding method was utilized. Otsu's thresholding method is an image segmentation technique that determines the optimal threshold value to separate the foreground (nodules) from the background (lung tissue) based on the histogram of intensity values [20]. The threshold value was then utilized in a linear transfer function to make the internal structure of the lungs, corresponding to the first distribution, more transparent. By doing so, the second distribution, which corresponded to the nodules, became more opaque, thus emphasizing their visibility.
 
-PUT AN INTENSITY DIAGRAM HERE 
 ![Histogram ](https://github.com/Dev-Erf/Lung-Cancer-Prediction-and-visualization/assets/85780796/2b59f535-6d76-47d4-8f0f-07e571d59f70)
 
 
 Otsu's thresholding method is a commonly used algorithm in image processing for determining the optimal threshold value for image segmentation. The algorithm works by finding the threshold that minimizes the variance between two classes of pixels, which are separated by the threshold. In the case of the intensity diagram of lungs, the algorithm was used to separate the two Gaussian-like distributions. This method allowed for greater visualization of the internal structures of the lungs, particularly the nodules, which are often difficult to detect due to their similarity in appearance to surrounding lung tissue. By utilizing Otsu's thresholding method, the research was able to distinguish between the foreground and background of the image, making it easier to identify the nodules.
 
 
-PUT A GIF OF VISUALIZATION HERE 
 ![ezgif com-video-to-gif(1)](https://github.com/Dev-Erf/Lung-Cancer-Prediction-and-visualization/assets/85780796/49d39307-a2c1-4f54-984f-a2f0913b04c1)
 
 
@@ -79,8 +77,6 @@ To make the heatmap more interpretable, we rescale it to the size of the origina
 
 ![Screen_Recording_2023-04-05_at_02 03 11](https://github.com/Dev-Erf/Lung-Cancer-Prediction-and-visualization/assets/85780796/72d4c8af-0d9e-4682-a9c7-e1404fca1b61)
 
-
-PUT A GIF OF THE CANCEROUS PART HERE 
 
 ### Future Work
 
