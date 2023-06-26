@@ -57,6 +57,12 @@ In addition to the gradient transfer function, other transfer functions were use
 
 </p> 
 
+
+<p align="center">
+  <img src="https://github.com/Dev-Erf/Lung-Cancer-Prediction-and-visualization/assets/85780796/2b59f535-6d76-47d4-8f0f-07e571d59f70" alt="Histogram">
+</p>
+
+
 Otsu's thresholding method is a commonly used algorithm in image processing for determining the optimal threshold value for image segmentation. The algorithm works by finding the threshold that minimizes the variance between two classes of pixels, which are separated by the threshold. In the case of the intensity diagram of lungs, the algorithm was used to separate the two Gaussian-like distributions. This method allowed for greater visualization of the internal structures of the lungs, particularly the nodules, which are often difficult to detect due to their similarity in appearance to surrounding lung tissue. By utilizing Otsu's thresholding method, the research was able to distinguish between the foreground and background of the image, making it easier to identify the nodules.
 
 
