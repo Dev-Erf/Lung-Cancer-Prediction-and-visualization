@@ -79,13 +79,17 @@ To make the heatmap more interpretable, we rescale it to the size of the origina
 ### Future Work
 
 There is an area that has yet to be explored in the field of lung cancer detection using CT scans. Specifically, this tool can be utilized to investigate any patterns in the lungs preceding lung cancer. Typically, these patterns are hidden from radiologists, but neural network models and pattern recognition could be used to uncover these hidden patterns. Training a neural network to recognize these patterns can potentially detect lung cancer earlier and improve the chances of successful treatment. This could have a significant impact on patient outcomes and could potentially save lives. Additionally, this approach could lead to the development of new screening methods for lung cancer, which could help to reduce the overall incidence of the disease. There is still much work to be done in this area, but the potential benefits are significant.
-
-
+https://github.com/Dev-Erf/Lung-Cancer-Prediction-and-visualization/
 
 ## Support 
+<p>You can show your support by starring this project. </p>
+<a href="https://github.com/Dev-Erf/Lung-Cancer-Prediction-and-visualization/stargazers">
+   <img src="https://img.shields.io/github/stars/Dev-Erf/Dev-Erf.github.io?style=social" alt="Github Star">
+</a>
 
 
 ## Licence 
+[MIT](https://github.com/Dev-Erf/Dev-Erf.github.io/blob/main/LICENSE)
 
 ## Inspired By 
 
